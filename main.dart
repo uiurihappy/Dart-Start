@@ -14,4 +14,17 @@ void main(List<String> args) {
   } else {
     print(name);
   }
+
+  print("=============");
+  String? ybchar = 'ybchar';
+  ybchar = null;
+
+  if (ybchar != null) {
+    ybchar.isNotEmpty; // boolean Type
+
+    print(ybchar.isNotEmpty);
+  } else {
+    print(ybchar?.isEmpty); // null 출력
+  }
+  print(ybchar);
 }
