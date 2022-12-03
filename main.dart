@@ -27,4 +27,7 @@ void main(List<String> args) {
     print(ybchar?.isEmpty); // null 출력
   }
   print(ybchar);
+
+  final String finalName = 'ybchar';
+  finalName = 'test';
 }
