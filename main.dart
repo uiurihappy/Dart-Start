@@ -36,6 +36,15 @@ void main(List<String> args) {
   late final String lateName;
   // do something, go to API
   lateName = 'ybchar';
-  // final 변수이기에 재할당은 안됨
-  // lateName = 'var';
+  /** 
+   * final 변수이기에 재할당은 안됨
+   * 장점은 실수를 막아준다.
+   * late는 final 변수 할당 전까지는 print도 안된다.
+   * 만약 API 데이터를 할당받지 않는 것에 대해 Checking이 가능하다.
+   * lateName = 'var';
+  */
+
+  // const는 컴파일 할 때 알고 있는 값에 사용하는 것이다.
+  // const API = fetchApi();
+  const conName = 'ybchar';
 }
