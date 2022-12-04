@@ -28,6 +28,14 @@ void main(List<String> args) {
   }
   print(ybchar);
 
+  // final 변수는 const와 같이 변경이 불가능
+  // finalName = 'test';
   final String finalName = 'ybchar';
-  finalName = 'test';
+
+  // late는 초기 데이터 없이 변수를 설정할 수 있다.
+  late final String lateName;
+  // do something, go to API
+  lateName = 'ybchar';
+  // final 변수이기에 재할당은 안됨
+  // lateName = 'var';
 }
