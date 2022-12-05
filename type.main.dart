@@ -3,11 +3,11 @@ import 'dart:ffi';
 void main(List<String> args) {
   print("main Start");
 
-  String name = 'ybchar';
+  // String name = 'ybchar';
   bool alive = true;
-  int age = 28;
+  // int age = 28;
   // 홀수, 짝수 여부 체크
-  print(age.isOdd);
+  // print(age.isOdd);
   double money = 69.99;
 
   // num 자료형을 사용하면 그 숫자는 integer 일 수도 있고, double일 수도 있다.
@@ -37,5 +37,25 @@ void main(List<String> args) {
   print(first);
   print(last);
 
+  /**  String interpolation
+   * text에 변수를 추가하는 방법
+   * 
+   */
+  var name = 'ybchar';
+  var age = 25;
+  var greeting =
+      "Hello everyone, my name is ${name} and I'm ${age + 2}, nice to meet you!";
+
+  print(greeting);
+
   // collection for
+  var oldFriends = ['nico', 'lynn', 'ybchar'];
+  var newFriends = [
+    'lewis',
+    'ralph',
+    'darren',
+    for (var friend in oldFriends) "💖 $friend",
+  ];
+
+  print(newFriends);
 }
