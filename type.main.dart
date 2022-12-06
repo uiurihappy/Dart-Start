@@ -58,4 +58,42 @@ void main(List<String> args) {
   ];
 
   print(newFriends);
+
+  // map
+  var player = {
+    'name': 'ybchar',
+    'xp': '19.99',
+    'superpower': false,
+  };
+
+  Map<int, bool> typePlayer = {
+    1: true,
+    2: false,
+    3: true,
+  };
+
+  // List Map
+  Map<List<int>, bool> listMap = {
+    [1, 2, 3, 4]: true,
+    [25, 213, 3, 30]: false,
+  };
+
+  List<Map<String, Object>> players = [
+    {'name': 'ybchar', 'xp': 19.21},
+    {'name': 'ybchar', 'xp': 19.45124}
+  ];
+  // Map에서도 script 언어처럼 map 함수인 keys, values가 가능하다.
+
+  // Set
+  // Set에 포함된 item들은 모두 unique하다.
+  var numbers = {1, 2, 3, 4};
+  Set<int> numberSet = {1, 2, 34, 5};
+
+  numberSet.add(1);
+  numberSet.add(2);
+  numberSet.add(3);
+  numberSet.add(4);
+  numberSet.add(5);
+
+  print(numberSet);
 }
