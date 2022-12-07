@@ -94,6 +94,6 @@ void main(List<String> args) {
   numberSet.add(3);
   numberSet.add(4);
   numberSet.add(5);
-
+// 1,2,5는 이미 존재하므로 3,4가 순서대로 추가된다.
   print(numberSet);
 }
