@@ -21,16 +21,15 @@ String sayHello2({required String name, int? age, required String country}) {
 }
 
 // nullable
-String sayHello3({String? name, int? age, String? country}) {
-  return "Hello $name, you are $age, and you come from $country";
-}
+String sayHello3(String name, int age, [String? country = 'cuba']) =>
+    'Hello $name, you are $age, and you come from $country';
 
 // func
 void main(List<String> args) {
-  print(sayHello(
+  var result = sayHello3(
     // named argument
-    age: 27,
-    name: "ybchar",
-    country: "seoul",
-  ));
+    "ybchar",
+    27,
+  );
+  print(result);
 }
