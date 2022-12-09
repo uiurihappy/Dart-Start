@@ -45,6 +45,12 @@ ListOfInts reverseListOfNumber(ListOfInts list) {
   return reversed.toList();
 }
 
+typedef UserInfo = Map<String, String>;
+
+String sayHi(Map<String, String> userInfo) {
+  return "hi ${userInfo['name']}";
+}
+
 // func
 void main(List<String> args) {
   // print(sayHello(
@@ -65,4 +71,7 @@ void main(List<String> args) {
 
   var reversed = reverseListOfNumber([1, 2, 3, 4]);
   print(reversed);
+
+  var hi = sayHi({"name": "ybchar"});
+  print(hi);
 }
