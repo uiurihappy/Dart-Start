@@ -21,15 +21,48 @@ String sayHello2({required String name, int? age, required String country}) {
 }
 
 // nullable
-String sayHello3(String name, int age, [String? country = 'cuba']) =>
-    'Hello $name, you are $age, and you come from $country';
+String sayHello3({String? name, int? age, String? country}) {
+  return "Hello $name, you are $age, and you come from $country";
+}
+
+// String capitalizeName(String? name) {
+//   if(name != null) {
+//     return name.toUpperCase();
+//   }
+//   return 'TEST';
+// }
+
+String capitalizeName(String? name) =>
+    // name != null ? name.toUpperCase() : 'ANON';
+    // QQ, Question question operator
+    name?.toUpperCase() ?? 'ANON';
+
+// Typedef: 자료형이 헷갈릴 때 도움이 될 alias를 만드는 방법
+typedef ListOfInts = List<int>;
+
+ListOfInts reverseListOfNumber(ListOfInts list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
 
 // func
 void main(List<String> args) {
-  var result = sayHello3(
-    // named argument
-    "ybchar",
-    27,
-  );
-  print(result);
+  // print(sayHello(
+  //   // named argument
+  //   age: 27,
+  //   name: "ybchar",
+  //   country: "seoul",
+  // ));
+
+  // var name = capitalizeName('ybchar'); // YBCHAR
+  // capitalizeName(null);
+
+  String? name;
+  name ??= 'ybchar';
+  // name ??= 'another';    // name이 다시 null이 될리가 없다.
+
+  print(name);
+
+  var reversed = reverseListOfNumber([1, 2, 3, 4]);
+  print(reversed);
 }
