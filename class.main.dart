@@ -33,6 +33,13 @@ class Player {
         this.team = 'red',
         this.xp = 0;
 
+  // fromJson
+  // Property init
+  Player.fromJson(Map<String, dynamic> playerJson)
+      : name = playerJson['name'],
+        xp = playerJson['xp'],
+        team = playerJson['team'];
+
   void sayHi() {
     print("Hi My name is $name");
   }
@@ -68,4 +75,29 @@ void main(List<String> args) {
     "test",
     25,
   );
+
+  print("===================================");
+
+  var apiResData = [
+    {
+      "name": "ybchar",
+      "team": "red",
+      "xp": 0,
+    },
+    {
+      "name": "cha",
+      "team": "blue",
+      "xp": 0,
+    },
+    {
+      "name": "tester",
+      "team": "yellow",
+      "xp": 0,
+    },
+  ];
+
+  apiResData.forEach((playerJson) {
+    var player = Player.fromJson(playerJson);
+    player.sayHi();
+  });
 }
