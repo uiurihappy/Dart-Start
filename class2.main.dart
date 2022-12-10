@@ -10,6 +10,13 @@ abstract class Human {
   void walk();
 }
 
+// walk 메소드를 가지고 있다고 확신!
+class Coach extends Human {
+  void walk() {
+    print("the coach is walking");
+  }
+}
+
 // red or blue 팀만 되도록 설정
 enum Team { red, blue, pupple }
 
@@ -19,6 +26,8 @@ class Player extends Human {
   String name;
   XpLevel xp;
   Team team;
+
+// walk 메소드를 가지고 있다고 확신!
   void walk() {
     print("Im walker");
   }
