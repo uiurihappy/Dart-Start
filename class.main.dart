@@ -1,6 +1,6 @@
 class Player {
   // player의 이름을 바꾸지 못하도록 final
-  late final String name, team;
+  late String name, team;
   late int xp, age;
 
   // Player(String name, int xp) {
@@ -97,6 +97,7 @@ void main(List<String> args) {
   ];
 
   apiResData.forEach((playerJson) {
+    // key-value 형식으로 가져왔다.
     var player = Player.fromJson(playerJson);
     player.sayHi();
   });
